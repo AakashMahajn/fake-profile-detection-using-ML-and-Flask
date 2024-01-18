@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Fake Profile Detection</title>
+
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel = "stylesheet" href="{{url_for('static', filename='Styles/main.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Instagram Fake Profile Detection</h1>
+        
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="post">
+
+                <label>Profile Picture</label><br>
+                <input type="text" name="profilepic" required="required"><br>
+
+                <label>Username Length</label><br>
+                <input type="text" name="username" required="required"><br>
+
+                <label>FullName Length</label><br>
+                <input type="text" name="fullname" required="required"><br>
+
+                <label>FullName = Username</label><br>
+                <input type="text" name="equal" required="required"><br>
+
+                <label>Description Length</label><br>
+                <input type="text" name="description" required="required"><br>
+
+                <label>External URL</label><br>
+                <input type="text" name="externalurl" required="required"><br>
+
+                <label>Is Account Private</label><br>
+                <input type="text" name="private" required="required"><br>
+
+                <label>No. of posts</label><br>
+                <input type="text" name="posts" required="required"><br>
+
+                <label>No. of followers</label><br>
+                <input type="text" name="followers" required="required"><br>
+
+                <label>No. of following</label><br>
+                <input type="text" name="following" required="required"><br>
+
+                <button type="submit" class="btn">Predict</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    </form>
+
+</body>
+</html>
