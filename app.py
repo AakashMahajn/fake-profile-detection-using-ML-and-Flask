@@ -24,7 +24,7 @@ def predict():
     
     prediction = model.predict([[profilepic, username, words, fullname, equal, description, external, private, posts, followers, following]])
     output = round(prediction[0])
-    return render_template('index.html',prediction_text=f'TH account is {output}')
+    return render_template('index.html',prediction_text=f'The account is {output}')
 
 
 if __name__ == "__main__":
