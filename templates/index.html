@@ -12,49 +12,52 @@
 <body>
     <div class="container">
         <h1>Instagram Fake Profile Detection</h1>
-        
-        <div class="form">
-            <form action="{{url_for('predict')}}" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form">
+                    <form action="{{url_for('predict')}}" method="post">
+                        <label>Profile Picture</label><br>
+                        <input type="text" name="profilepic" required="required"><br>
 
-                <label>Profile Picture</label><br>
-                <input type="text" name="profilepic" required="required"><br>
+                        <label>Username Length</label><br>
+                        <input type="text" name="username" required="required"><br>
 
-                <label>Username Length</label><br>
-                <input type="text" name="username" required="required"><br>
+                        <label>FullName words</label><br>
+                        <input type="text" name="words" required="required"><br>
 
-                <label>FullName Length</label><br>
-                <input type="text" name="fullname" required="required"><br>
+                        <label>FullName Length</label><br>
+                        <input type="text" name="fullname" required="required"><br>
 
-                <label>FullName = Username</label><br>
-                <input type="text" name="equal" required="required"><br>
+                        <label>FullName = Username</label><br>
+                        <input type="text" name="equal" required="required"><br>
+                    </form>
+                </div>
+            </div>
 
-                <label>Description Length</label><br>
-                <input type="text" name="description" required="required"><br>
+            <div class="col-md-6">
+                <form action="{{url_for('predict')}}" method="post">
+                    <label>Description Length</label><br>
+                    <input type="text" name="description" required="required"><br>
 
-                <label>External URL</label><br>
-                <input type="text" name="externalurl" required="required"><br>
+                    <label>External URL</label><br>
+                    <input type="text" name="external" required="required"><br>
 
-                <label>Is Account Private</label><br>
-                <input type="text" name="private" required="required"><br>
+                    <label>Is Account Private</label><br>
+                    <input type="text" name="private" required="required"><br>
 
-                <label>No. of posts</label><br>
-                <input type="text" name="posts" required="required"><br>
+                    <label>No. of posts</label><br>
+                    <input type="text" name="posts" required="required"><br>
 
-                <label>No. of followers</label><br>
-                <input type="text" name="followers" required="required"><br>
+                    <label>No. of followers</label><br>
+                    <input type="text" name="followers" required="required"><br>
 
-                <label>No. of following</label><br>
-                <input type="text" name="following" required="required"><br>
+                    <label>No. of following</label><br>
+                    <input type="text" name="following" required="required"><br>
 
-                <button type="submit" class="btn">Predict</button>
-            </form>
+                    <button type="submit" class="btn">Predict</button>
+                </form>
+            </div>
         </div>
     </div>
-
-
-
-
-    </form>
-
 </body>
 </html>
