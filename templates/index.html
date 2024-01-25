@@ -12,10 +12,8 @@
 <body>
     <div class="container">
         <h1>Instagram Fake Profile Detection</h1>
-        <div class="row">
-            <div class="col-md-6">
                 <div class="form">
-                    <form action="{{url_for('predict')}}" method="post">
+                    <form method="post">
                         <label>Profile Picture</label><br>
                         <input type="text" name="profilepic" required="required"><br>
 
@@ -52,8 +50,11 @@
                         <button type="submit" class="btn">Predict</button>
                     </form>
                 </div>
-            </div>
-        </div>
     </div>
+
+    {% if result %}
+    <p>Result: {{ result }}</p>
+    {% endif %}
+
 </body>
 </html>
